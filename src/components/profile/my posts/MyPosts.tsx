@@ -7,7 +7,10 @@ export function MyPosts() {
             <div>
                 My Post
                 <div>
-                    New post
+                    <textarea></textarea>
+                    <div>
+                        <button>add</button>
+                    </div>
                 </div>
                 <div className={s.post}>
                     <div className={s.item}>
