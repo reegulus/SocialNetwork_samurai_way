@@ -1,10 +1,11 @@
 import React from "react";
 import s from "./MyPosts.module.css"
+import {Post} from "./post/Post";
 
 
 export function MyPosts() {
     return (
-            <div>
+            <div className={s.item}>
                 My Post
                 <div>
                     <textarea></textarea>
@@ -12,17 +13,10 @@ export function MyPosts() {
                         <button>add</button>
                     </div>
                 </div>
-                <div className={s.post}>
-                    <div className={s.item}>
-                        <img src="https://img.freepik.com/free-vector/cute-cat-ninja-holding-sword-cartoon-vector-icon-illustration-animal-holiday-icon-concept-isolated_138676-6049.jpg" alt=""/>
-                        Post 1
-                    </div>
-                    <div className={s.item}>
-                        Post 2
-                    </div>
-                    <div className={s.item}>
-                        Post 3
-                    </div>
+                <div>
+                   <Post/>
+                   <Post/>
+                   <Post/>
                 </div>
             </div>
     )
