@@ -14,9 +14,9 @@ export function MyPosts() {
                     </div>
                 </div>
                 <div>
-                   <Post/>
-                   <Post/>
-                   <Post/>
+                   <Post message={"Hi, samurai!"} likesCount={5}/>
+                   <Post message={"I am an incubator student."} likesCount={7}/>
+                   <Post message={"Is today the first lesson on Monday?"}likesCount={3}/>
                 </div>
             </div>
     )
