@@ -1,8 +1,11 @@
 .header {
     grid-area: h;
-    background-color: chartreuse;
+    background-color: rgb(106, 64, 227);
 }
+
 .header img {
     width: 70px;
-    height: 70px
+    height: 70px;
+    padding: 10px 0 0 14%;
+
 }
