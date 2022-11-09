@@ -1,6 +1,14 @@
 .nav {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
     grid-area: n;
-    background-color: #3fd041;
+    background-color: #6a40e2;
+    padding: 40px 0 0 0;
+    font-size: 25px;
+    line-height: 2.5;
+
 }
 .item {
     color: white;
