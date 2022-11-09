@@ -10,9 +10,9 @@ function App() {
         <div className="App">
             <Header/>
             <Navbar/>
-            <div>
-                <Dialogs/>
-            <Profile/>
+            <div className={"content"}>
+                {/*<Dialogs/>*/}
+                <Profile/>
             </div>
         </div>
     );
