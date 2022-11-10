@@ -5,21 +5,21 @@ import {NavLink} from "react-router-dom";
 export function Navbar() {
     return (
         <div className={s.nav}>
-            <div className={s.item}>
-                <a href={'profile'}>Profile</a>
-            </div>
+            <NavLink to={'profile'} className={s.item}>
+                Profile
+            </NavLink>
             <NavLink to={"message"} className={`${s.item} ${s.active}`}>
                 Message
             </NavLink>
-            <div className={s.item}>
-                <a href={'news'}>News</a>
-            </div>
-            <div className={s.item}>
-                <a href={'music'}>Music</a>
-            </div>
-            <div className={s.item}>
-                <a href={'settings'}>Settings</a>
-            </div>
+            <NavLink to={'news'} className={s.item}>
+               News
+            </NavLink>
+            <NavLink to={'music'} className={s.item}>
+               Music
+            </NavLink>
+            <NavLink to={'settings'} className={s.item}>
+              Settings
+            </NavLink>
         </div>
     )
 }
