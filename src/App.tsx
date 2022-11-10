@@ -14,7 +14,7 @@ function App() {
             <Navbar/>
             <div className={"content"}>
                 <Route  path={'/profile'} component={Profile}/>
-                <Route path={'/dialogs'} component={Dialogs}/>
+                <Route path={'/message'} component={Dialogs}/>
             </div>
         </div>
     );

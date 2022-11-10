@@ -5,7 +5,7 @@ export function Navbar() {
     return (
         <div className={s.nav}>
             <div className={s.item}>
-href                <a href={'profile'}>Profile</a>
+                <a href={'profile'}>Profile</a>
             </div>
             <div className={`${s.item} ${s.active}`}>
                 <a href={'message'}>Message</a>
