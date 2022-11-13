@@ -11,7 +11,7 @@ export function Navbar() {
                 </NavLink>
             </div>
             <div className={`${s.item} ${s.active}`}>
-                <NavLink activeClassName={s.active} to={"message"}>
+                <NavLink activeClassName={s.active} to={"dialogs"}>
                     Message
                 </NavLink>
             </div>
