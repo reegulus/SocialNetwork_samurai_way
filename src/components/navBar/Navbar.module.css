@@ -1,18 +1,15 @@
 .nav {
-    display: flex;
-    flex-direction: column;
-    /*justify-content: center;*/
-    align-items: center;
     grid-area: n;
     background-color: #6a40e2;
-    padding: 40px 0 0 0;
+    padding: 40px 0 0 60px;
     font-size: 25px;
     line-height: 2.5;
 
 }
-.item {
+.item a {
     color: white;
+    text-decoration: none;
 }
-.active {
-    color: gold;
+.item a.active {
+    color: #ffdc00;
 }
