@@ -1,0 +1,17 @@
+.dialogs_items a {
+    color: white;
+    text-decoration: none;
+
+}
+.dialogs_items img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+}
+.dialogs a.active {
+color: gold;
+}
+.dialogs img a{
+    width: 50px;
+    height: 50px;
+}
