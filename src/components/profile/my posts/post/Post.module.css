@@ -2,8 +2,10 @@
     width: 55px;
     /*height: 30px;*/
     border-radius: 50px;
+
 }
 
 .item {
     color: greenyellow;
+    padding: 10px 10px 10px 10px ;
 }
