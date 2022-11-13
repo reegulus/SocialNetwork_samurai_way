@@ -1,0 +1,16 @@
+.messages_items {
+    color: white;
+    min-width: 50px;
+    min-height: 65px;
+    background-color: coral;
+    margin: 20px 0 0 0;
+    border-radius: 30px;
+}
+.message {
+    padding: 5px 0px 0px 20px;
+
+}
+.message:before {
+    content: '◁';
+    color: blue;
+}
