@@ -3,34 +3,22 @@
     grid-template-areas:
             "d m";
     grid-template-rows: 80px 1fr;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 4fr 10fr;
     grid-gap: 2px;
     height: 100vh;
     padding: 35px 0px 0px 20px;
-    font-size: 25px;
-    color: white;
+    font-size: 20px;
+    /*color: white;*/
     line-height: 2.5;
 
 }
 
 .dialogs_items {
-
-}
-.dialogs a{
-    text-decoration: none;
-    color: white;
-}
-
-.dialogs_items .active {
-    color: gold;
+    /*color: gold;*/
     /*text-decoration: none;*/
 
 }
 
-.messages_items .active {
-    color: gold;
-}
-
-.message {
-
+.messages_items {
+    /*color: gold;*/
 }
