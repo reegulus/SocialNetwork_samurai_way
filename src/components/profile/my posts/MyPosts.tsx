@@ -4,6 +4,10 @@ import {Post} from "./post/Post";
 
 
 export function MyPosts() {
+    const messageDate = [
+        {message: "Hi, samurai!", likesCount: 5},
+        {message: "I am an incubator student.", likesCount: 7}
+    ]
     return (
             <div className={s.item}>
                 My Post
@@ -14,8 +18,7 @@ export function MyPosts() {
                     </div>
                 </div>
                 <div>
-                   <Post message={"Hi, samurai!"} likesCount={5}/>
-                   <Post message={"I am an incubator student."} likesCount={7}/>
+                   <Post messageDate={messageDate}/>
                 </div>
             </div>
     )
