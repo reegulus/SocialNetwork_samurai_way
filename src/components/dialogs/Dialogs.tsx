@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./Dialogs.module.css"
 import {Message} from "./message/Message";
-import {DialogItem} from "./dialog/DialogItem";
+import {DialogItem} from "./dialogItem/DialogItem";
 
 
 export function Dialogs() {
