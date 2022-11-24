@@ -7,7 +7,7 @@ import {DialogItem} from "./dialog/DialogItem";
 export function Dialogs() {
 
     const dialogData = [
-        {id: 1, name: "Peter Quill"},
+        {id: 1, name: "Peter Quill",},
         {id: 2, name: "Gamora"},
         {id: 3, name: "Groot"},
         {id: 4, name: "Drax Destroyer"},
