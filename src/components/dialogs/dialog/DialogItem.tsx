@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./DialogItem.module.css";
 import {NavLink} from "react-router-dom";
-import ava_astronaut from "./astronaut_ninja.png"
+import ava_astronaut from "../../../img/astronaut_dialogs.png"
 
 type DialogItemType = {
     id: number
