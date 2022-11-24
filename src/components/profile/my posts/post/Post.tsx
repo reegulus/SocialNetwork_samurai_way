@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Post.module.css"
-import cat_ninja from "./cat_ninja.png"
+import cat_ninja from "../../../../img/cat_ninja_post.png"
 
 export type MessageDatePropsType = {
     message: string
