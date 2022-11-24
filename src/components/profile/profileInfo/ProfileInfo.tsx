@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./ProfileInfo.module.css"
+import samurai from "./samurai-1032044.png"
 
 export function ProfileInfo() {
     return (
@@ -7,7 +8,7 @@ export function ProfileInfo() {
             <div className={s.profile_info}>
 
                 <img
-                    src="https://lookingforclan.com/sites/default/files/styles/header_background/public/2017-10/samurai-1032044.jpg?itok=AgXodXzd"
+                    src={samurai}
                     alt=""/>
             </div>
             <div className={s.avatDes}>
