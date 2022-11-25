@@ -14,11 +14,11 @@ export function Dialogs() {
         {id: 5, name: "Raccoon Rocket"}
     ]
     const messageData = [
-        {message: "It's generally a masterpiece of abstract art!" },
-        {message: "Yes, Quil. On the ship is a pigsty."},
-        {message: "I am Groot!"},
-        {message: "I'm going to drink"},
-        {message: "So, who is here for the first time in space?"}
+        {id: 1, message: "It's generally a masterpiece of abstract art!" },
+        {id: 2, message: "Yes, Quil. On the ship is a pigsty."},
+        {id: 3, message: "I am Groot!"},
+        {id: 4, message: "I'm going to drink"},
+        {id: 5, message: "So, who is here for the first time in space?"}
     ]
     return (
         <div className={s.dialogs}>
