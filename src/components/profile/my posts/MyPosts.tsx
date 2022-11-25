@@ -1,13 +1,12 @@
 import React from "react";
 import s from "./MyPosts.module.css"
 import {Post} from "./post/Post";
+import {PostType} from "../../../redux/state";
 
-
-export function MyPosts() {
-    const messageDate = [
-        {id: 1, message: "Hi, samurai!", likesCount: 5},
-        {id: 2, message: "I am an incubator student.", likesCount: 7}
-    ]
+type MyPostsType = {
+    posts: Array<PostType>
+}
+export function MyPosts(props: MyPostsType) {
     return (
             <div className={s.item}>
                 My Post
@@ -18,7 +17,7 @@ export function MyPosts() {
                     </div>
                 </div>
                 <div>
-                   <Post messageDate={messageDate}/>
+                   <Post messages={props.posts}/>
                 </div>
             </div>
     )
