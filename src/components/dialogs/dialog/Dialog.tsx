@@ -1,35 +1,32 @@
 import React from "react";
-import s from "./DialogItem.module.css";
+import s from "./Dialog.module.css";
 import {NavLink} from "react-router-dom";
 import ava_astronaut from "../../../img/astronaut_dialogs.png"
+import {DialogType} from "../../../redux/state";
 
-type DialogItemType = {
+/*type DialogType = {
     id: number
     name: string
-
+}*/
+type DialogPropsType = {
+    dialog: Array<DialogType>
 }
 
-type DialogItemPropsType = {
-    dialogItem: Array<DialogItemType>
-}
-export function DialogItem(props: DialogItemPropsType) {
+export function Dialog(props: DialogPropsType) {
     let path = "/dialogs"
-    const dialogItemMap = props.dialogItem.map( (el) => {
+    const dialogMap = props.dialog.map((el) => {
         return (
-            <div>
+            <div key={el.id}>
                 <img src={ava_astronaut} alt=""/>
                 <NavLink activeClassName={s.active} to={`${path} ${el.id}`}>{el.name}</NavLink>
             </div>
         )
     })
-
     return (
         <div className={s.dialogs_items}>
             <div className={`${s.dialog} ${s.active}`}>
-                {dialogItemMap}
-
+                {dialogMap}
             </div>
-
         </div>
     )
 }

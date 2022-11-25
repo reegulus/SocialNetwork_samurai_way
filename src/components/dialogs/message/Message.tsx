@@ -10,7 +10,7 @@ type MessagePropsType = {
 }
 
 export function Message(props: MessagePropsType) {
-    const messageMap = props.message.map(el => <div key={el.id} className={`${s.message} $${s.active}`}>{el.message}</div>)
+    const messageMap = props.message.map(el => <div key={el.id} className={`${s.message} ${s.active}`}>{el.message}</div>)
     return (
         <div className={s.messages_items}>
             <div>
