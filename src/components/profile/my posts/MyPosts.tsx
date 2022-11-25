@@ -5,8 +5,8 @@ import {Post} from "./post/Post";
 
 export function MyPosts() {
     const messageDate = [
-        {message: "Hi, samurai!", likesCount: 5},
-        {message: "I am an incubator student.", likesCount: 7}
+        {id: 1, message: "Hi, samurai!", likesCount: 5},
+        {id: 2, message: "I am an incubator student.", likesCount: 7}
     ]
     return (
             <div className={s.item}>

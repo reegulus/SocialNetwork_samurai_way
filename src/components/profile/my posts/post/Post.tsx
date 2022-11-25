@@ -5,6 +5,7 @@ import cat_ninja from "../../../../img/cat_ninja_post.png"
 export type MessageDatePropsType = {
     message: string
     likesCount: number
+    id: number
 }
 export type PostPropsType = {
     messageDate: Array<MessageDatePropsType>
@@ -16,7 +17,7 @@ export function Post(props: PostPropsType) {
             <div className={s.item}>
                 {props.messageDate.map((m) => {
                     return (
-                        <div>
+                        <div key={m.id}>
                             <img
                                 src={cat_ninja}
                                 alt="icons"/>

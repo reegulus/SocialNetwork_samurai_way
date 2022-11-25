@@ -10,11 +10,26 @@ export type MessageData = {
     message: string
     id: number
 }
+export type PostType = {
+    message : string
+    likesCount: number
+    id: number
+}
+export type ProfilePageType = {
+    posts: Array<PostType>
+}
+
 export type StatePropsType = {
+    profilePage: ProfilePageType
     dialogsPage: DialogsPageType
 }
 export const state: StatePropsType = {
-
+    profilePage: {
+        posts: [
+            {message: "Hi, samurai!", likesCount: 5},
+            {message: "I am an incubator student.", likesCount: 7}
+        ]
+    },
     dialogsPage: {
         dialogDataType: [
             {id: 1, name: "Peter Quill",},
