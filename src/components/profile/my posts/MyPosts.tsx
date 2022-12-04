@@ -7,13 +7,18 @@ type MyPostsType = {
     posts: Array<PostType>
 }
 export function MyPosts(props: MyPostsType) {
+const newPostElements = React.createRef<HTMLTextAreaElement>()
+    const addPost = () => {
+        const text = newPostElements.current?.value
+        alert(text)
+    }
     return (
             <div className={s.item}>
                 My Post
                 <div>
-                    <textarea></textarea>
+                    <textarea ref={newPostElements}></textarea>
                     <div>
-                        <button>add</button>
+                        <button onClick={addPost}>add</button>
                     </div>
                 </div>
                 <div>
