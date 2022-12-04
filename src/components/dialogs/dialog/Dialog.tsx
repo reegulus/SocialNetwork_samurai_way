@@ -25,6 +25,7 @@ export function Dialog(props: DialogPropsType) {
     return (
         <div className={s.dialogs_items}>
             <div className={`${s.dialog} ${s.active}`}>
+
                 {dialogMap}
             </div>
         </div>

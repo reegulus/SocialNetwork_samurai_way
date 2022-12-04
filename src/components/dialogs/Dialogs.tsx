@@ -8,7 +8,7 @@ import {DialogsPageType} from "../../redux/state";
 type DialogsType = {
     dialogsPage: DialogsPageType
 }
-export function Dialogs(props: DialogsType) {
+export function  Dialogs(props: DialogsType) {
 
     return (
         <div className={s.dialogs}>
