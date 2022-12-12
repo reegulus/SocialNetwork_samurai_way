@@ -1,4 +1,7 @@
-import {rerenderEntireTree} from "../render";
+
+let rerenderEntireTree = (state: RootStateType) => {
+    console.log('State changed')
+}
 
 export type DialogType = {
     id: number
@@ -54,19 +57,21 @@ export const state: RootStateType = {
 }
 export const addPost = (postText: string) => {
     const newPost: PostType = {
-        //new Date().getTime()
         id: 5,
         message: postText,
         likesCount: 0
     }
     state.profilePage.posts.push(newPost)
     rerenderEntireTree(state)
+    state.profilePage.newPostText = ''
 }
 
 export const updateNewPostText = (newText: string) => {
     state.profilePage.newPostText = newText
     rerenderEntireTree(state)
 }
-
+export const subscribe = (observer: ()=> void) => {
+rerenderEntireTree = observer
+}
 
 
