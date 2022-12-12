@@ -4,10 +4,11 @@ import {Header} from "./components/header/Header";
 import {Navbar} from "./components/navBar/Navbar";
 import {Profile} from "./components/profile/Profile";
 import {Dialogs} from "./components/dialogs/Dialogs";
-import {RootStateType} from "./redux/state";
+import {RootStateType, StoreType} from "./redux/state";
 import {BrowserRouter, Route} from "react-router-dom";
 
 type AppPropsType = {
+    store: StoreType
     state: RootStateType
     addPost: (postText: string) => void
     updateNewPostText: (newText: string) => void
@@ -24,9 +25,9 @@ function App(props: AppPropsType) {
                 <div className={"content"}>
                     <Route exact path={'/profile'}
                            render={() => <Profile
-                               updateNewPostText={props.updateNewPostText}
+                               updateNewPostText={props.store.updateNewPostText.bind(props.store)}
                                profilePage={profilePage}
-                               addPost={props.addPost}/>}/>
+                               addPost={props.store.addPost.bind(props.store)}/>}/>
                     <Route exact path={'/dialogs'}
                            render={() => <Dialogs
                                dialogsPage={dialogsPage}/>
