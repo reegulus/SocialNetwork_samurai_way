@@ -9,8 +9,10 @@ import {BrowserRouter, Route} from "react-router-dom";
 
 type AppPropsType = {
     state: RootStateType
-    addPost: (postText: string)=> void
+    addPost: (postText: string) => void
+    updateNewPostText: (newText: string) => void
 }
+
 function App(props: AppPropsType) {
     const profilePage = props.state.profilePage
     const dialogsPage = props.state.dialogsPage
@@ -22,8 +24,9 @@ function App(props: AppPropsType) {
                 <div className={"content"}>
                     <Route exact path={'/profile'}
                            render={() => <Profile
-                               profilePage={profilePage} addPost={props.addPost}/>
-                           }/>
+                               updateNewPostText={props.updateNewPostText}
+                               profilePage={profilePage}
+                               addPost={props.addPost}/>}/>
                     <Route exact path={'/dialogs'}
                            render={() => <Dialogs
                                dialogsPage={dialogsPage}/>
