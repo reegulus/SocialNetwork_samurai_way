@@ -6,7 +6,7 @@ import {ActionsTypes, ProfilePageType} from "../../redux/state";
 
 type ProfilePagePropsType = {
     profilePage: ProfilePageType
-    addPost: (postText: string) => void
+    addPost: (addNewPost: string) => void
     dispatch: (action: ActionsTypes) => void
     changeNewPostText: (newText: string) => void
 }

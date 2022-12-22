@@ -10,7 +10,7 @@ import {BrowserRouter, Route} from "react-router-dom";
 type AppPropsType = {
     store: StoreType
     state: RootStateType
-    addPost: (postText: string) => void
+    addPost: (addNewPost: string) => void
     changeNewPostText: (newText: string) => void
     dispatch: (action: ActionsTypes) => void
 }
@@ -28,6 +28,7 @@ function App(props: AppPropsType) {
                            render={() => <Profile
                                changeNewPostText={props.store._changeNewPostText}
                                profilePage={profilePage}
+                               newPostText={props.newPostText}
                                dispatch={props.dispatch}
                                addPost={props.store._addPost}/>}/>
                     <Route exact path={'/dialogs'}
