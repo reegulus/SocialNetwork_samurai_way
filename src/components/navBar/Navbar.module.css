@@ -1,15 +1,28 @@
 .nav {
-    grid-area: n;
+    grid-area: nav;
     background-color: #6a40e2;
-    padding: 40px 0 0 60px;
-    font-size: 25px;
-    line-height: 2.5;
+    padding: 10px;
+    /*font-size: 25px;*/
+    /*line-height: 2.5;*/
 
 }
-.item a {
+/*.item a {
+    color: white;
+
+}
+.item a.active {
+    color: #ffdc00;
+}*/
+.nav a {
     color: white;
     text-decoration: none;
 }
-.item a.active {
+
+.nav a:hover {
+    border-bottom: 1px solid white;
+}
+
+.nav a.active  {
+    font-weight: bold;
     color: #ffdc00;
 }

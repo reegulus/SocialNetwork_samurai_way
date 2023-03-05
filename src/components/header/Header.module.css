@@ -1,10 +1,14 @@
 .header {
-    grid-area: h;
+    /*display: flex;
+    align-items: center;
+    justify*/-content: center;
+    padding: 10px;
+    grid-area: header;
     background-color: rgb(106, 64, 227);
 }
 
 .header img {
-    width: 150px;
-    height: 80px;
+    width: 250px;
+    height: 100px;
     padding: 10px 0 0 80px;
 }

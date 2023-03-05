@@ -30,27 +30,26 @@ export  type RootStateType = {
 }
 export type StoreType = {
     _state: RootStateType
-    _addPost: (addNewPost: string)=> void
-    _onChange: ()=> void
-    _changeNewPostText: (newText: string)=> void
-    subscribe: (observer: ()=> void)=> void
-    getState: ()=> RootStateType
+    _onChange: () => void
+    // _addPost: (addNewPost: string) => void
+    // _changeNewPostText: (newText: string) => void
+    getState: () => RootStateType
+    subscribe: (observer: () => void) => void
     dispatch: (action: ActionsTypes) => void
 }
 
-export type ActionsTypes = ReturnType<typeof AddPostAC>  | ReturnType<typeof ChangeNewPostTextAC>
+export type ActionsTypes = ReturnType<typeof AddPostAC> | ReturnType<typeof ChangeNewPostTextAC>
 export const AddPostAC = (addNewPost: string) => {
     return {
         type: 'ADD-POST',
         addNewPost: addNewPost
-    }as const
+    } as const
 }
-
 export const ChangeNewPostTextAC = (addNewPost: string) => {
     return {
-    type: 'CHANGE-NEW-POST-TEXT',
-    newText: addNewPost
-}as const
+        type: 'CHANGE-NEW-POST-TEXT',
+        newText: addNewPost
+    } as const
 }
 
 const ADD_POST = 'ADD-POST'
@@ -83,35 +82,33 @@ export const store: StoreType = {
         }
     },
 
-    subscribe (observer: ()=> void) {
+    subscribe(observer: () => void) {
         this._onChange = observer
     },
 
-    _onChange() {},
+    _onChange() {
+    },
     getState() {
         return this._state
     },
 
-_addPost(addNewPost: string) {
-    const newPost: PostType = {
-        id: 5,
-        message: this._state.profilePage.newPostText,
-        likesCount: 0
-    }
-    this._state.profilePage.posts.push(newPost)
-    this._state.profilePage.newPostText = ''
-    rerenderEntireTree()
-},
-    _changeNewPostText(newText: string) {
-    this._state.profilePage.newPostText = newText
-    this._onChange()
-},
-
     dispatch(action) {
-        if (action.type === ADD_POST) {
-            this._addPost(action.addNewPost)
-        } else if (action.type === CHANGE_NEW_POST_TEXT) {
-            this._changeNewPostText(action.newText)
+        switch (action.type) {
+            case ADD_POST:
+                const newPost: PostType = {
+                    id: 5,
+                    message: this._state.profilePage.newPostText,
+                    likesCount: 0
+                }
+                this._state.profilePage.posts.push(newPost)
+                this._state.profilePage.newPostText = ''
+                rerenderEntireTree()
+                break
+            case CHANGE_NEW_POST_TEXT:
+                this._state.profilePage.newPostText = action.newText
+                this._onChange()
+                break
+
         }
     }
 }

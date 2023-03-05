@@ -5,11 +5,12 @@ import samurai from "../../../img/samurai_cover_profile.png"
 export function ProfileInfo() {
     return (
         <div>
-            <div className={s.profile_info}>
-
-                <img src={samurai} alt=""/>
+            <div className={s.profileInfo}>
+                <div>
+                <img className={s.samuraiBanner} src={samurai} alt="samurai" />
+                </div>
             </div>
-            <div className={s.avatDes}>
+            <div className={s.avatarDescription}>
                 Ava + description
             </div>
         </div>

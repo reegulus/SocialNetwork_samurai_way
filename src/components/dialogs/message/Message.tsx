@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./Message.module.css";
+import {ActionsTypes, DialogsPageType} from "../../../redux/state";
 
 export type MessageDataPropsType = {
     message: string

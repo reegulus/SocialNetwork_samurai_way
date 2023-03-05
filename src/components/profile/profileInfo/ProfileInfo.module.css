@@ -1,3 +1,9 @@
-.avatDes {
-    padding: 10px 0 0 10px;
+.profileInfo {
+    /*padding: 10px 0 0 10px;*/
+}
+.samuraiBanner {
+    width: 100%;
+}
+.avatarDescription {
+    padding: 10px;
 }

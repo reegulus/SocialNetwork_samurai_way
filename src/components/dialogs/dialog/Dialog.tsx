@@ -2,7 +2,7 @@ import React from "react";
 import s from "./Dialog.module.css";
 import {NavLink} from "react-router-dom";
 import ava_astronaut from "../../../img/astronaut_dialogs.png"
-import {DialogType} from "../../../redux/state";
+import {ActionsTypes, DialogType} from "../../../redux/state";
 
 /*type DialogType = {
     id: number
